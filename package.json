@@ -1,12 +1,31 @@
 {
   "name": "hattool",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "my mydaily tools",
-  "main": "main.js",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "unpkg": "dist/hattool.js",
+  "browser": "dist/hattool.js",
   "author": "xujianxing",
   "license": "MIT",
+  "keywords": [
+    "tools",
+    "typescript",
+    "javascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Owner-X/hattool"
+  },
+  "bugs": {
+    "url": "https://github.com/Owner-X/hattool/issues"
+  },
   "scripts": {
-    "build": "rollup -c"
+    "build:umd": "rimraf ./dist && rollup -c",
+    "build:cjs": "rimraf ./lib && tsc --module commonjs --outDir lib",
+    "build:esm": "rimraf ./esm && tsc --module ESNext --outDir esm",
+    "build": "npm run build:cjs && npm run build:esm && npm run build:umd",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
