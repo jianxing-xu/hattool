@@ -5,8 +5,4 @@
  * @FilePath: \hattool\test\index.js
  */
 
-const Hat = require("../dist/bundle-umd");
-
-
-
-console.log(Hat.isYearstoday(124356734))
+const Hat = require("../lib/index");

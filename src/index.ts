@@ -5,7 +5,7 @@
  * @FilePath: \hattool\src\main.ts
  */
 
-import { isYearstoday } from "./utils/timeago";
+import { isYearstoday } from "./utils/time";
 import {
   getType,
   isArr,

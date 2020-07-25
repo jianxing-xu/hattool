@@ -17,3 +17,5 @@ export const isBol = (obj): boolean => getType(obj) == "[object Boolean]";
 export const isFun = (obj): boolean => getType(obj) == "[object Function]";
 export const isUnd = (obj): boolean => getType(obj) == "[object Undefined]";
 export const isNull = (obj): boolean => getType(obj) == "[object Null]";
+export const isReg = (obj): boolean => getType(obj) == "[object RegExp]";
+export const isSym = (obj): boolean => getType(obj) == "[object Symbol]";
