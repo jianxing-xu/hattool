@@ -1,11 +1,10 @@
 /*
  * @Date: 2020-07-23 09:36:47
  * @LastEditors: xujianxing
- * @LastEditTime: 2020-07-23 14:52:41
- * @FilePath: \hattool\src\main.ts
+ * @LastEditTime: 2020-08-10 16:41:23
+ * @FilePath: \hattool\src\index.ts
  */
 
-import { isYearstoday } from "./utils/time";
 import {
   getType,
   isArr,
@@ -18,15 +17,26 @@ import {
   isStr,
   isUnd,
 } from "./common";
+import * as Arr from "./utils/arr";
+import * as Browser from "./utils/browser";
+import * as Time from "./utils/time";
+import * as Other from "./utils/other";
+import * as Device from "./utils/device";
 
-export { isYearstoday };
-export { getType };
-export { isArr };
-export { isBol };
-export { isDate };
-export { isFun };
-export { isNull };
-export { isNum };
-export { isObj };
-export { isStr };
-export { isUnd };
+export {
+  getType,
+  isArr,
+  isBol,
+  isDate,
+  isFun,
+  isNull,
+  isNum,
+  isObj,
+  isStr,
+  isUnd,
+  Arr,
+  Browser,
+  Time,
+  Other,
+  Device,
+};

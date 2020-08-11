@@ -1,6 +1,6 @@
 {
   "name": "hattool",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "my mydaily tools",
   "main": "lib/index.js",
   "module": "esm/index.js",
