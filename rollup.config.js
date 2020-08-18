@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-07-23 09:37:11
  * @LastEditors: xujianxing
- * @LastEditTime: 2020-07-23 16:06:00
+ * @LastEditTime: 2020-08-18 15:49:04
  * @FilePath: \hattool\rollup.config.js
  */
 import resolve from "rollup-plugin-node-resolve";

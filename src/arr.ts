@@ -1,8 +1,8 @@
 /*
  * @Date: 2020-08-10 13:39:42
  * @LastEditors: xujianxing
- * @LastEditTime: 2020-08-11 11:29:55
- * @FilePath: \hattool\src\utils\arr.ts
+ * @LastEditTime: 2020-08-18 15:28:52
+ * @FilePath: \hattool\src\arr.ts
  */
 
 /**
@@ -63,8 +63,25 @@ const shuffle = (arr: Array<any>) => {
   return arr;
 };
 
+/**
+ * 将一个一维数组，按指定个数分割为二维数组
+ * @param arr 处理的数组
+ * @param len 目标每个数组的长度
+ */
+const splitToArr = (arr: Array<any>, len: number) => {
+  const ret = [];
+  // 得到需要二位数组的长度
+  const count = Math.ceil(arr.length / len);
+  for (let i = 0; i < count; i++) {
+    // 采用 数组方法 slice 分割
+    ret.push(arr.slice(i * len, i * len + len));
+  }
+  return ret;
+};
+
 export default {
   deduplication,
   toTree,
   shuffle,
+  splitToArr,
 };

@@ -1,12 +1,19 @@
 /*
  * @Date: 2020-07-23 10:19:46
  * @LastEditors: xujianxing
- * @LastEditTime: 2020-08-11 14:10:02
+ * @LastEditTime: 2020-08-18 15:45:00
  * @FilePath: \hattool\test\index.js
  */
 
-const { Time, Browser } = require("../lib/utils/").Browser;
-console.log(Time.timeago(Date.now() - 10000));
+
+
+ 
+ 
+
+
+
+// const { Time, Browser } = require("../lib/utils/").Browser;
+// console.log(Time.timeago(Date.now() - 10000));
 
 // const formatTime = (val = +new Date(), dateType = "YYYY-MM-DD hh:mm:ss") => {
 //   // 将字符串转换成数字

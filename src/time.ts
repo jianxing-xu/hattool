@@ -1,11 +1,11 @@
 /*
  * @Date: 2020-07-22 13:54:38
  * @LastEditors: xujianxing
- * @LastEditTime: 2020-08-11 12:37:48
- * @FilePath: \hattool\src\utils\time.ts
+ * @LastEditTime: 2020-08-18 15:24:24
+ * @FilePath: \hattool\src\time.ts
  */
 
-import { isNull, isUnd, isDate, isNum } from "../common";
+import { isNull, isUnd, isDate, isNum } from "./common";
 
 /**
  * 获取去这一天 00:00 的时间戳
@@ -81,30 +81,30 @@ export const formatTime = (
   return str;
 };
 
-/**
- * 显示日期为多久之前
- * @param date 日期对象或者时间戳
- */
-export function timeago(date: Date | number) {
-  const timestamp = new Date(date).getTime();
-  const mistiming = Math.round((Date.now() - timestamp) / 1000);
-  const arrr = ["年", "个月", "星期", "天", "小时", "分钟", "秒"];
-  const arrn = [31536000, 2592000, 604800, 86400, 3600, 60, 1];
-  for (let i = 0; i < arrn.length; i++) {
-    const inm = Math.floor(mistiming / arrn[i]);
-    if (inm != 0) {
-      if (i === 0 && inm >= 50) return formatTime(timestamp);
-      return inm + arrr[i] + "前";
-    } else {
-      if (i === arrn.length - 1) return "刚刚";
-    }
-  }
-}
+// /**
+//  * 显示日期为多久之前
+//  * @param date 日期对象或者时间戳, safari and wechat bug !
+//  */
+// export function timeago(date: Date | number) {
+//   const timestamp = new Date(date).getTime();
+//   const mistiming = Math.round((Date.now() - timestamp) / 1000);
+//   const arrr = ["年", "个月", "星期", "天", "小时", "分钟", "秒"];
+//   const arrn = [31536000, 2592000, 604800, 86400, 3600, 60, 1];
+//   for (let i = 0; i < arrn.length; i++) {
+//     const inm = Math.floor(mistiming / arrn[i]);
+//     if (inm != 0) {
+//       if (i === 0 && inm >= 50) return formatTime(timestamp);
+//       return inm + arrr[i] + "前";
+//     } else {
+//       if (i === arrn.length - 1) return "刚刚";
+//     }
+//   }
+// }
 
 /**
  * 获取多长时间之前的时间对象，年为365算，月为30算
  * @param num 数量
- * @param type 类型：只能为YYYY|MM|DD|hh|mm|ss
+ * @param type 类型：只能为 YYYY | MM | DD | hh | mm | ss
  */
 export function getDateofBrfore(
   num: number,
